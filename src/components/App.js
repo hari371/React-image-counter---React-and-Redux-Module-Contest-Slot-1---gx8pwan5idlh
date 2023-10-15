@@ -4,7 +4,11 @@ import star from '../star.png'
 const App = () => {
   return (
     <div id="main">
-      <img src={star}  height="300px" width="300px" />
+      <img src={star}  height={`${height}+px`} width={`${height}+px`} onClick{()=>{
+        setHeight((oldValue)=>{
+          return oldValue+2;
+      })
+    }}/>
     </div>
   )
 }
